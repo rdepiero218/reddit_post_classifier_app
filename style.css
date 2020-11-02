@@ -1,0 +1,35 @@
+body {
+    color: #fff;
+    background-color:#181818;
+}
+
+h1 {
+    color: #fff;
+    background-color:#181818;
+}
+
+
+
+.stButton>button {
+    color: #000000;
+    border-radius: 12px;
+
+    /* height: 10em;
+    width: 10em; */
+}
+
+/* .stButton:hover{
+    background: #ff9800;
+    color: white;
+} */
+/* .overlayBtn {
+    display: none;
+} */
+
+.stTextInput>div>div>input {
+    color: 	#000000;
+}
+
+
+
+
