@@ -22,12 +22,6 @@ def display_url(url, link_text):
     st.markdown(link, unsafe_allow_html=True) 
 
 
-# def remote_css(url):
-#     st.markdown(f'<link href="{url}" rel="stylesheet">', unsafe_allow_html=True)    
-
-# def icon(icon_name):
-#     st.markdown(f'<i class="material-icons">{icon_name}</i>', unsafe_allow_html=True)
-
 startrek_url = 'https://www.reddit.com/r/startrek/'
 fallout_url = 'https://www.reddit.com/r/Fallout/'
 ###------------------------
@@ -59,12 +53,17 @@ with open('saved_rforest_model.pkl', 'rb') as f:
 st.header('Try it Out!')
 st.markdown('You can either enter your own sample text below or visit either subreddit to pull a post to test.')
 col1, col2 = st.beta_columns(2)
+
+### fancy buttons don't work on heroku :(
 with col1:
-    if st.button('Visit Star Trek Subreddit'):
-        webbrowser.open_new_tab(startrek_url)
+    display_url(fallout_url, 'Visit Fallout Subreddit')
+    # if st.button('Visit Star Trek Subreddit'):
+    #     webbrowser.open_new_tab(startrek_url)
 with col2:
-    if st.button('Visit Fallout Subreddit'):
-        webbrowser.open_new_tab(startrek_url)
+    display_url(startrek_url, 'Visit Star Trek Subreddit')
+    # if st.button('Visit Fallout Subreddit'):
+    #     webbrowser.open_new_tab(startrek_url)
+
 
 st.markdown('Once you have your sample post, enter the text below and hit the button to classify it.')
 user_input = st.text_input('', value='I love Fallout 4')
