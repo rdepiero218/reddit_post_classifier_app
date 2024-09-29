@@ -3,6 +3,6 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 
 
-@st.cache ## decorator
-def predict_input(classifier_model, input):
-    return classifier_model.predict(input)
+@st.cache_resource ## decorator
+def predict_input(_classifier_model, input):
+    return _classifier_model.predict(input)
