@@ -7,7 +7,6 @@ from sklearn.ensemble import RandomForestClassifier
 import numpy as np
 import pickle
 from predict import predict_input
-import webbrowser
 
 startrek_url = 'https://www.reddit.com/r/startrek/'
 fallout_url = 'https://www.reddit.com/r/Fallout/'
