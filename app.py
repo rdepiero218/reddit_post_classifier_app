@@ -41,14 +41,14 @@ col1, col2 = st.columns(2)
 
 ### fancy buttons don't work on heroku :(
 with col1:
-    st.link_button('Visit Fallout Subreddit', fallout_url, )
+    st.link_button('Visit Fallout Subreddit', fallout_url)
 
 with col2:
     st.link_button('Visit Star Trek Subreddit', startrek_url)
 
 
 st.markdown('Once you have your sample post, enter the text below and hit the button to classify it.')
-user_input = st.text_input('', value='I love Fallout 4')
+user_input = st.text_input('Enter Text Here', value='I love Fallout 4', label_visibility='collapsed')
 
 button_clicked = st.button('Classify It!')
 
